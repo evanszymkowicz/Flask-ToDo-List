@@ -1,4 +1,4 @@
-# Import Python functions from flask framework, install
+# Import Python functions from flask framework, install to env as needed
 
     from flask import Flask, render_template, request, jsonify
     from pusher import Pusher
@@ -7,7 +7,7 @@
     # Define flask app variable
     app = Flask(__name__)
 
-    # configure object
+    # configure object #These are custom credentials when you sign up with Pusher. I have not completed the process and have yet to update them here.
     pusher = Pusher(
       app_id='YOUR_APP_ID',
       key='YOUR_APP_KEY',
@@ -15,7 +15,6 @@
       cluster='YOUR_APP_CLUSTER',
       ssl=True
     )
-
     # index route for main page
     @app.route('/')
     def index():
